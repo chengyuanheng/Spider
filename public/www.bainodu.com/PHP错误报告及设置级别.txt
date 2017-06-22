@@ -1,0 +1,37 @@
+在写PHP程序的时候，出现错误很正常，在出错的情况下，PHP会给我们提示，一般的提示有三种：注意、警告、错误。
+我们要做的就是依据提示，对我们的程序代码进行修改。
+下面是一段PHP程序，里面包含了注意、警告、错误三种提示。
+今天我们要做的就是设置报告错误的级别，比如让PHP只显示“错误”，或者是让PHP只显示“注意”，这个就是个人按照个人的需要进行设置了，但是怎么设置呢？
+方法有两种：一种是修改服务器上的
+php.ini
+文件，另外一种是在我们的程序代码文件中进行设置。
+先说第一种修改php.ini文件
+首先要打开
+php.ini
+文件，搜索
+error_reporting
+，我们会看到默认
+error_reporting = E_ALL
+是开启的，意思就是全部错误都报告。
+只显示注意：
+error_reporting = E_NOTICE
+只显示警告：
+error_reporting = E_WARNING
+只显示错误：
+error_reporting = E_ERROR
+我们也可以组合着写：例如显示全部除过注意的：
+error_reporting =E_ALL & ~E_NOTICE
+，其他的组合大家按照自己需要来写。
+第二种就是在自己写的PHP代码中设置
+在我们写的代码文件中写入
+error_reporting()
+这个函数，例如我们需要只显示注意，我们这样写
+error_reporting(E_NOTICE)
+；像上面的我们需要显示全部但除过注意的可以这样写
+error_reporting(E_ALL & ~E_NOTICE)
+；
+说白了，第二种方法就是把应该在
+php.ini
+文件中修改的东西自己写在代码中，一般应用于没有权限修改
+php.ini
+文件的情况。

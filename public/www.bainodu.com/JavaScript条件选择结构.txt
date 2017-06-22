@@ -1,0 +1,13 @@
+JavaScript条件选择结构一共有以下几种：
+
+else
+不能单独存在。
+else if
+可以写多个。
+结构：
+例：
+最后一个
+break
+可以省略，
+default
+可以省略。

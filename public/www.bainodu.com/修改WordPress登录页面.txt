@@ -1,0 +1,10 @@
+今天给大家介绍下 WordPress 登录页面的相关 Hook，通过这些 Hook 可以定义 WordPress 登录页面的样式，logo 等，甚至定制出一个完全不同风格的 WordPress 登录界面出来。
+1、定制登录页面 Logo
+默认登陆页面是 WordPress 的 logo，如果你希望使用自己的的 Logo，可以通过 
+login_head
+ Hook 来定制它，注意要加上 !important ，这样优先级才会最高，才不会被默认的覆盖。
+默认登录页面 Logo 的链接是连到 https://wordpress.org，比如希望将这个链接连到博客的首页：
+默认登录页面 Logo 的链接标题是：“Powered by WordPress”，比如希望将这个标题改成博客的名称：
+想在登录界面的底部加一些版权说明或者加上一个 faq 什么的：
+默认登陆之后是跳转到 WordPress 后台，如果你想让用户跳转到一个指定的页面怎么操作：
+如果你把登陆界面的样式做了非常大的改动，写了一大堆 CSS 代码，并放入一个样式文件中，可以通过下面代码加载：
