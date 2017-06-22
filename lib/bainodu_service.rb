@@ -7,7 +7,7 @@ class BainoduService
   end
 
   def spider
-    path = "#{Rails.root}/public/www.bainodu.com/"
+    path = "../www.bainodu.com/"
     FileUtils.mkdir_p(path) unless File.exists?(path)
     @urls.each do |url|
       _doc = Nokogiri::HTML(open(url))

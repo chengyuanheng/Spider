@@ -1,9 +1,11 @@
-class SpiderService
+require 'nokogiri'
+require 'open-uri'
+load("bainodu_service.rb")
 
+class SpiderService
   def initialize
     @urls = ["http://www.bainodu.com"]
   end
-
 
   def spider
     @urls.each do |url|
@@ -12,5 +14,7 @@ class SpiderService
       end
     end
   end
-
 end
+
+
+SpiderService.new.spider
