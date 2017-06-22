@@ -1,6 +1,6 @@
 require 'nokogiri'
 require 'open-uri'
-load("bainodu_service.rb")
+load("lib/bainodu_service.rb")
 
 class SpiderService
   def initialize

@@ -1,1 +1,1 @@
-# Run ruby spider.rb
+# Run ruby lib/spider.rb
